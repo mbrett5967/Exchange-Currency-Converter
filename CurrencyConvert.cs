@@ -7,6 +7,7 @@ namespace CurrencyConverter
 {
     public class Converter
     {
+        // API key
         private const string ApiUrl = "https://api.exchangerate-api.com/v4/latest/GBP";
 
         public static async Task Main()
@@ -18,6 +19,8 @@ namespace CurrencyConverter
         {
             double pounds = GetAmountFromUser();
             var rates = await FetchLiveRates();
+          
+            // Handling excpetion from API pull 
             if (rates != null)
             {
                 DisplayConversionResults(pounds, rates);
@@ -28,7 +31,7 @@ namespace CurrencyConverter
             }
             ShowEndMenu();
         }
-
+         // User Input GBP only
         private static double GetAmountFromUser()
         {
             Console.WriteLine("Enter amount: (GBP)");
@@ -39,7 +42,7 @@ namespace CurrencyConverter
             }
             return Math.Round(pounds, 2);
         }
-
+        // Fetching live rates
         private static async Task<JObject?> FetchLiveRates()
         {
             using (HttpClient client = new HttpClient())
@@ -59,7 +62,7 @@ namespace CurrencyConverter
                 }
             }
         }
-
+        // Output of results
         private static void DisplayConversionResults(double pounds, JObject rates)
         {
             if (rates == null)
@@ -84,7 +87,7 @@ namespace CurrencyConverter
                 Console.WriteLine("Currency rates for USD or EUR are not available.");
             }
         }
-
+       // End menu display
         private static void ShowEndMenu()
         {
             Console.WriteLine();
@@ -93,7 +96,7 @@ namespace CurrencyConverter
             char finale = Console.ReadKey(true).KeyChar;
             EndMenu(finale);
         }
-
+    // End menu options 
         private static void EndMenu(char endOption)
         {
             if (endOption == 'R' || endOption == 'r')
