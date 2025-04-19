@@ -1,4 +1,4 @@
-# Currency and and Exchange rate converter
+# Currency and Exchange rate converter
 
 LInk to App:
 https://github.com/mbrett5967/ConsoleApp2/blob/main/CurrencyConvert.cs
