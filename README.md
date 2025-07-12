@@ -20,6 +20,7 @@ I will be continuing with this and expanding on it, to further my progression. S
 
 ---Improvements---
  * User interface, transitioning from Console based app -- $${\color{blue}\text{In\ Progress}}$$
+ * Front-end Development -- $${\color{blue}\text{In\ Progress}}$$
  * More rate exchanges -- $${\color{red}\text{Not\ Started}}$$
  * Perhaps implementing a method to pull several rates at once -- $${\color{red}\text{Not\ Started}}$$
  * allow user to change initial currency from GBP -- $${\color{blue}\text{In\ Progress}}$$
