@@ -8,7 +8,7 @@ I created a small exchange rate converter that initially was mean't to be expand
 
 I found Co-pilot to be overly helpful in many ways, and although I would admit now that it is not something I will use going forward (from a learning perspective). I am eager to learn and be proficient with this language and I discovered Co-pilot can make my code slightly less readable and hard to follow. It was however, exceptional in helping me understand API keys and explaining specific errors I was getting. Being able to glance over the problems I had, listed in the editor, right clicking and asking Co-pilot to explain, is extremely helpful to a new learner such as myself.
 
-I will be continuing with this and expanding on it, to further my progression. Starting firstly with an Avalonia merge and bringing this console app, to be a proficient desktop application with a decent front-end. 
+I will be continuing with this and expanding on it to further my progression. Starting firstly, with an Avalonia merge and bringing this console app, to be a proficient desktop application accompanied with a decent front-end. 
 
 --- What I learned---
 * ✅API key implementation
