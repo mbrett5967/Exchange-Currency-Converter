@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "0QqyugrhE5Q=",
+  "success": true,
+  "projectFilePath": "/Users/matthewdemetriades/Projects/C# Projects/Course/Code practice/Training/Exchange-Currency-Converter/src/CurrencyConvert.Core/CurrencyConvert.csproj",
+  "expectedPackageFiles": [
+    "/Users/matthewdemetriades/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512",
+    "/Users/matthewdemetriades/.nuget/packages/microsoft.netcore.app.ref/8.0.16/microsoft.netcore.app.ref.8.0.16.nupkg.sha512",
+    "/Users/matthewdemetriades/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.16/microsoft.aspnetcore.app.ref.8.0.16.nupkg.sha512",
+    "/Users/matthewdemetriades/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.16/microsoft.netcore.app.host.osx-arm64.8.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}
