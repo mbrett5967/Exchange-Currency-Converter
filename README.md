@@ -18,9 +18,9 @@ I found Co-pilot to be overly helpful in many ways, and although I would admit n
 
 
  ----Improvements----
- * User interface, transitioning from Console based app
- * More rate exchanges
- * Perhaps implementing a method to pull several rates at once.
- * allow user to change initial currency from GBP
+ * User interface, transitioning from Console based app -- $${\color{blue}\text{In\ Progress}}$$
+ * More rate exchanges -- $${\color{red}\text{Not\ Started}}$$
+ * Perhaps implementing a method to pull several rates at once -- $${\color{red}\text{Not\ Started}}$$
+ * allow user to change initial currency from GBP -- $${\color{blue}\text{In\ Progress}}$$
 
  
