@@ -26,3 +26,6 @@ build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
 
 [/Users/matthewdemetriades/Projects/C\# Projects/Course/Code practice/Training/Exchange-Currency-Converter/src/CurrencyConvert.UI/MainWindow.axaml]
 build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml
+
+[/Users/matthewdemetriades/Projects/C\# Projects/Course/Code practice/Training/Exchange-Currency-Converter/src/CurrencyConvert.UI/Styles/AppDefaultStyles.axaml]
+build_metadata.AdditionalFiles.SourceItemGroup = AvaloniaXaml

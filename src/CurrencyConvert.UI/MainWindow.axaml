@@ -1,9 +1,37 @@
 <Window xmlns="https://github.com/avaloniaui"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="CurrencyConvert.UI.MainWindow"
-        Title="CurrencyConvert.UI">
-    Welcome to Avalonia!
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+    x:Class="CurrencyConvert.UI.MainWindow"
+    Title="CurrencyConvert.UI">
+    
+<Grid Background="{DynamicResource ResourceKey=PrimaryBackground}">
+  <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10" Orientation="Horizontal">
+    <TextBox x:Name="UserInput" Height="30" Text="Enter amount.." GotFocus="UserInput_GotFocus"></TextBox>
+    
+    <ToggleButton Content="Select Currency" x:Name="currencyToggleButton" HorizontalAlignment="Center" VerticalAlignment="Center" />
+    
+    <Popup IsOpen="{Binding ElementName=currencyToggleButton, Path=IsChecked}" 
+           PlacementTarget="{Binding ElementName=currencyToggleButton}" 
+           Placement="Bottom">
+      <Border Background="White" BorderBrush="Gray" BorderThickness="1" CornerRadius="4" Padding="5">
+        <ListBox x:Name="selectedFromCurrency" />
+      </Border>
+    </Popup>
+
+    <Image Source="avares://CurrencyConvert.UI/Assets/exchange-arrow-11030121-8877725.png" Width="100"/>
+    <ToggleButton Content="Chosen Currency" x:Name="SecondcurrencyToggleButton" HorizontalAlignment="Center" VerticalAlignment="Center" />
+    
+    <Popup IsOpen="{Binding ElementName=SecondcurrencyToggleButton, Path=IsChecked}" 
+           PlacementTarget="{Binding ElementName=SecondcurrencyToggleButton}" 
+           Placement="Bottom">
+      <Border Background="White" BorderBrush="Gray" BorderThickness="1" CornerRadius="4" Padding="5">
+        <ListBox x:Name="convertingToCurrency" />
+      </Border>
+    </Popup>
+
+    <Button Theme="{StaticResource EllipseButton}" BorderThickness="100" BorderBrush="OliveDrab" Background="LightGreen" Margin="20" HorizontalContentAlignment="Center" VerticalAlignment="Center">Convert!</Button>
+    </StackPanel>
+</Grid>
 </Window>

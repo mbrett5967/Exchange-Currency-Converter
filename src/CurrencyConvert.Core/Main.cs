@@ -3,47 +3,78 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
 
-namespace CurrencyConverter
+
+
+
+static void Main ()
 {
-    public class Converter
+
+}
+
+//namespace CurrencyConverter
+/*
+
+public class Converter
+{
+    // API key
+    private const string ApiUrl = "https://api.exchangerate-api.com/v4/latest/GBP";
+
+    public static async Task Main()
     {
-        // API key
-        private const string ApiUrl = "https://api.exchangerate-api.com/v4/latest/GBP";
+        await ExecuteMainLogic();
+    }
+    // Main 
+    public static async Task ExecuteMainLogic();
+    {
+        
+     double userValue = GetAmountFromUser();
+    var rates = await FetchLiveRates();
+            //var selectedFromCurrency = 
+            //var convertingToCurrency = 
 
-        public static async Task Main()
-        {
-            await ExecuteMainLogic();
-        }
 
-        public static async Task ExecuteMainLogic()
-        {
-            double pounds = GetAmountFromUser();
-            var rates = await FetchLiveRates();
-          
-            // Handling excpetion from API pull 
-            if (rates != null)
+           // Handling exception from API pull 
+        if (rates != null)
             {
-                DisplayConversionResults(pounds, rates);
-            }
-            else
+                DisplayConversionResults(userValue, rates);
+}
+        else
             {
                 Console.WriteLine("Unable to fetch rates. Please try again later.");
             }
             ShowEndMenu();
-        }
-         // User Input GBP only
+        } 
+
+
+
+         // User Input - will need to pull users current currency from API
         private static double GetAmountFromUser()
         {
-            Console.WriteLine("Enter amount: (GBP)");
-            double pounds;
-            while (!double.TryParse(Console.ReadLine(), out pounds) || pounds <= 0)
+            Console.WriteLine("Enter amount: ");
+            double userValue;
+            while (!double.TryParse(Console.ReadLine(), out userValue) || userValue <= 0)
             {
                 Console.WriteLine("Please enter a valid positive amount using a decimal");
             }
-            return Math.Round(pounds, 2);
+            return Math.Round(userValue, 2);
         }
-        // Fetching live rates
-        private static async Task<JObject?> FetchLiveRates()
+        
+        // Return list of currencies
+       // public static List<string> GetSupportedCurrencies(JObject rates)
+        {
+
+
+
+
+
+
+
+
+
+
+        // Fetching live rates, calculate conversion and return result to UI
+        public static async Task<double> ConvertCurrency(double amount, string fromCurrency, string toCurrency)
+
         {
             using (HttpClient client = new HttpClient())
             {
@@ -52,7 +83,7 @@ namespace CurrencyConverter
                     HttpResponseMessage response = await client.GetAsync(ApiUrl);
                     response.EnsureSuccessStatusCode();
                     string responseBody = await response.Content.ReadAsStringAsync();
-                    return JObject.Parse(responseBody);
+                    return JObject.rates(responseBody);
                 }
                 catch (HttpRequestException e)
                 {
@@ -61,58 +92,12 @@ namespace CurrencyConverter
                     return null;
                 }
             }
-        }
-        // Output of results
-        private static void DisplayConversionResults(double pounds, JObject rates)
-        {
-            if (rates == null)
-            {
-                Console.WriteLine("Unable to fetch rates. Please try again later.");
-                return;
-            }
-
-            Console.WriteLine($"\n£{pounds} is equal to: ");
-            if (rates["rates"]?["USD"] != null && rates["rates"]?["EUR"] != null)
-            {
-                double usdRate = rates["rates"]?["USD"]?.Value<double>() ?? 0;
-                double euroRate = rates["rates"]?["EUR"]?.Value<double>() ?? 0;
-                double usdAmount = Math.Round(pounds * usdRate, 2);
-                double euroAmount = Math.Round(pounds * euroRate, 2);
-
-                Console.WriteLine($"- {usdAmount} USD");
-                Console.WriteLine($"- {euroAmount} Euros");
-            }
-            else
-            {
-                Console.WriteLine("Currency rates for USD or EUR are not available.");
-            }
-        }
-       // End menu display
-        private static void ShowEndMenu()
-        {
-            Console.WriteLine();
-            Console.WriteLine("[R]eset");
-            Console.WriteLine("[E]xit");
-            char finale = Console.ReadKey(true).KeyChar;
-            EndMenu(finale);
-        }
-    // End menu options 
-        private static void EndMenu(char endOption)
-        {
-            if (endOption == 'R' || endOption == 'r')
-            {
-                Console.WriteLine("\nResetting...");
-                ExecuteMainLogic().Wait();
-            }
-            else if (endOption == 'E' || endOption == 'e')
-            {
-                Console.WriteLine("Exiting...");
-                Environment.Exit(0);
-            }
-        }
-    }
-}
+        }         
+   
+    
+ */
 
 
 
-
+//. Chinese Yuans , US Dollar , GBP , Euro , Japanese Yen , Kenyan Shillings ,Indian Rupees
+// UAE Dirhams , New Zealand Dollars, Australian Dollars , Turkish Lira , Qatar riyals , Saudi riyals

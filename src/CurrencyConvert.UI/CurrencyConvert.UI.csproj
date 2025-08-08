@@ -22,5 +22,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CurrencyConvert.Core\CurrencyConvert.csproj" />
+    <AvaloniaResource Include="Assets/**" />
   </ItemGroup>
 </Project>
