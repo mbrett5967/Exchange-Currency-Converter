@@ -1,9 +1,11 @@
 # Currency and Exchange rate converter
 
 Link to App:<h4>https://github.com/mbrett5967/Exchange-Currency-Converter/blob/main/src/CurrencyConvert.Core/Main.cs</h4>
-> This is currently being rewritten from a console application to full Ui frontend. As a result, previous application is now WIP and non functioning
+>[!IMPORTANT]  
+> As of July 2025: This is currently being rewritten from a console application to full Ui frontend. As a result, previous application is now WIP and non functioning.
 
 --- Summary --- 
+
 
 I created a small exchange rate converter that initially was mean't to be expanded on with UI elemnts. However, I started to experiment with Co-pilot. My goal was to eventually link this via an API to pull live rates and use this within the app. This was both for my learning experience and also part of my goal, which was to eventually move into .NET MAUI and publish on IOS.
 
