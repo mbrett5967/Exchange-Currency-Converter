@@ -1,6 +1,7 @@
 # Currency and Exchange rate converter
 
-   Link to App:<h4>https://github.com/mbrett5967/Exchange-Currency-Converter/blob/main/src/CurrencyConvert.Core/Main.cs</h4>
+Link to App:<h4>https://github.com/mbrett5967/Exchange-Currency-Converter/blob/main/src/CurrencyConvert.Core/Main.cs</h4>
+> This is currently being rewritten from a console application to full Ui frontend. As a result, previous application is now WIP and non functioning
 
 --- Summary --- 
 
