@@ -10,7 +10,7 @@
   <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10" Orientation="Horizontal">
     <TextBox x:Name="UserInput" Height="30" Text="Enter amount.." GotFocus="UserInput_GotFocus"></TextBox>
     
-    <ToggleButton Content="Select Currency" x:Name="currencyToggleButton" HorizontalAlignment="Center" VerticalAlignment="Center" />
+    <ToggleButton Content="Selected Currency" x:Name="currencyToggleButton"  BorderThickness="2" BorderBrush="Gold" HorizontalAlignment="Center" VerticalAlignment="Center" />
     
     <Popup IsOpen="{Binding ElementName=currencyToggleButton, Path=IsChecked}" 
            PlacementTarget="{Binding ElementName=currencyToggleButton}" 
@@ -21,7 +21,7 @@
     </Popup>
 
     <Image Source="avares://CurrencyConvert.UI/Assets/exchange-arrow-11030121-8877725.png" Width="100"/>
-    <ToggleButton Content="Chosen Currency" x:Name="SecondcurrencyToggleButton" HorizontalAlignment="Center" VerticalAlignment="Center" />
+    <ToggleButton Content="Chosen Currency" x:Name="SecondcurrencyToggleButton" BorderThickness="2" BorderBrush="Gold" HorizontalAlignment="Center" VerticalAlignment="Center" />
     
     <Popup IsOpen="{Binding ElementName=SecondcurrencyToggleButton, Path=IsChecked}" 
            PlacementTarget="{Binding ElementName=SecondcurrencyToggleButton}" 
@@ -31,7 +31,7 @@
       </Border>
     </Popup>
 
-    <Button Theme="{StaticResource EllipseButton}" BorderThickness="100" BorderBrush="OliveDrab" Background="LightGreen" Margin="20" HorizontalContentAlignment="Center" VerticalAlignment="Center">Convert!</Button>
+    <Button Theme="{StaticResource EllipseButton}" BorderThickness="200" BorderBrush="Gold" Margin="20" HorizontalContentAlignment="Center" VerticalAlignment="Center">Convert!</Button>
     </StackPanel>
 </Grid>
 </Window>

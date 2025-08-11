@@ -11,8 +11,8 @@
     <Application.Resources>
         <SolidColorBrush x:Key="PrimaryBackground">#111F36</SolidColorBrush>
         <ControlTheme x:Key="EllipseButton" TargetType="Button">
-            <Setter Property="Background" Value="Green"/>
-            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Background" Value="Gray"/>
+            <Setter Property="Foreground" Value="White"/>
             <Setter Property="Padding" Value="8"/>
             <Setter Property="Template">
                 <ControlTemplate>
