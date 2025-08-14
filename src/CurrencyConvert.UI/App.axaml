@@ -9,23 +9,8 @@
         <StyleInclude Source="avares://CurrencyConvert.UI/Styles/AppDefaultStyles.axaml"/>
     </Application.Styles>
     <Application.Resources>
-        <SolidColorBrush x:Key="PrimaryBackground">#111F36</SolidColorBrush>
-        <ControlTheme x:Key="EllipseButton" TargetType="Button">
-            <Setter Property="Background" Value="Gray"/>
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="Padding" Value="8"/>
-            <Setter Property="Template">
-                <ControlTemplate>
-                    <Panel>
-                        <Ellipse Fill="{TemplateBinding Background}"
-                                 HorizontalAlignment="Stretch"
-                                 VerticalAlignment="Stretch"/>
-                        <ContentPresenter x:Name="PART_ContentPresenter"
-                                          Content="{TemplateBinding Content}"
-                                          Margin="{TemplateBinding Padding}"/>
-                    </Panel>
-                </ControlTemplate>
-            </Setter>
-        </ControlTheme>   
+        <SolidColorBrush x:Key="PrimaryBackground" Color="#111F36"/>
+     <SolidColorBrush x:Key="BorderBackground" Color="#E4B754"/>          
+            
     </Application.Resources>
 </Application>

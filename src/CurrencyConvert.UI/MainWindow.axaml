@@ -6,32 +6,33 @@
     x:Class="CurrencyConvert.UI.MainWindow"
     Title="CurrencyConvert.UI">
     
-<Grid Background="{DynamicResource ResourceKey=PrimaryBackground}">
+<Grid Background="{StaticResource PrimaryBackground}">
+  
+  <!--Logo image-->  
+  <Image Source ="avares://CurrencyConvert.UI/Assets/CClogo.png" Width="200" Height="200"
+  HorizontalAlignment="Left" VerticalAlignment="Top"/>
+
+  <!--Main user interface-->
   <StackPanel Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Spacing="10" Orientation="Horizontal">
-    <TextBox x:Name="UserInput" Height="30" Text="Enter amount.." GotFocus="UserInput_GotFocus"></TextBox>
+    <TextBox x:Name="UserInput" Height="30" Text="Enter amount.." GotFocus="UserInput_GotFocus" BorderThickness="1" BorderBrush="{StaticResource BorderBackground}"></TextBox>
     
-    <ToggleButton Content="Selected Currency" x:Name="currencyToggleButton"  BorderThickness="2" BorderBrush="Gold" HorizontalAlignment="Center" VerticalAlignment="Center" />
+    <!--'From currency' ComboBox button-->
+     <ComboBox x:Name="selectedFromCurrency" PlaceholderText="preview selected:" BorderThickness="2" BorderBrush="{StaticResource BorderBackground}"
+     HorizontalAlignment="Center" VerticalAlignment="Center" Width="200"/>
+      
     
-    <Popup IsOpen="{Binding ElementName=currencyToggleButton, Path=IsChecked}" 
-           PlacementTarget="{Binding ElementName=currencyToggleButton}" 
-           Placement="Bottom">
-      <Border Background="White" BorderBrush="Gray" BorderThickness="1" CornerRadius="4" Padding="5">
-        <ListBox x:Name="selectedFromCurrency" />
-      </Border>
-    </Popup>
 
+    <!--Exchange arrow image-->
     <Image Source="avares://CurrencyConvert.UI/Assets/exchange-arrow-11030121-8877725.png" Width="100"/>
-    <ToggleButton Content="Chosen Currency" x:Name="SecondcurrencyToggleButton" BorderThickness="2" BorderBrush="Gold" HorizontalAlignment="Center" VerticalAlignment="Center" />
     
-    <Popup IsOpen="{Binding ElementName=SecondcurrencyToggleButton, Path=IsChecked}" 
-           PlacementTarget="{Binding ElementName=SecondcurrencyToggleButton}" 
-           Placement="Bottom">
-      <Border Background="White" BorderBrush="Gray" BorderThickness="1" CornerRadius="4" Padding="5">
-        <ListBox x:Name="convertingToCurrency" />
-      </Border>
-    </Popup>
+    <!--'To Currency' ComboBox button-->
+    <ComboBox x:Name="convertingToCurrency" PlaceholderText="preview desired:" BorderThickness="2" BorderBrush="{StaticResource BorderBackground}"
+     HorizontalAlignment="Center" VerticalAlignment="Center" Width="200"/>
+      
 
-    <Button Theme="{StaticResource EllipseButton}" BorderThickness="200" BorderBrush="Gold" Margin="20" HorizontalContentAlignment="Center" VerticalAlignment="Center">Convert!</Button>
+    <!--Convert button-->
+    <Button Content="Convert!" HorizontalAlignment="Center" VerticalAlignment="Center" BorderThickness="3" BorderBrush="{StaticResource BorderBackground}"></Button>
+
     </StackPanel>
 </Grid>
 </Window>

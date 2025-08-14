@@ -9,8 +9,8 @@ public partial class MainWindow : Window
         InitializeComponent();
 
         // Listbox buttons - These get updated when the user selects a currency.(state tracking)
-        //string selectedFromCurrency = FromListBox.SelectedItem.ToString();
-        //string convertingToCurrency = ToListBox.SelectedItem.ToString();
+        //string selectedFromCurrency = FromComboBox.SelectedItem.ToString();
+        //string convertingToCurrency = ToComboBox.SelectedItem.ToString();
      
     }
     
