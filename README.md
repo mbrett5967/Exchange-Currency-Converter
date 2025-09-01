@@ -14,7 +14,7 @@ I found Co-pilot to be overly helpful in many ways, and although I would admit n
 I will be continuing with this and expanding on it to further my progression. Starting firstly, with an Avalonia merge and bringing this console app, to be a proficient desktop application accompanied with a decent front-end. 
 
 --- What I learned---
-* ✅API key implementation
+* ~~✅API key implementation~~  ✅public, open REST API endpoint
 * ✅Further excpetion awareness and handling
 * ✅Co-pilot ,it's merits and faults
 * ✅New namespace libraries
