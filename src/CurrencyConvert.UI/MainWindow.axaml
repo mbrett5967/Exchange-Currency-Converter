@@ -5,22 +5,8 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="CurrencyConvert.UI.MainWindow"
         Title="CurrencyConvert.UI">
-
-    <Window.Styles>
-        <!-- Style for the "Convert" button -->
-        <Style Selector="Button.convert-button">
-          <Setter Property="Background" Value="#053363"/>
-          <Setter Property="Foreground" Value="White"/>
-        </Style>
-
-        <!-- Hover effect for the "Convert" button -->
-        <Style Selector="Button.convert-button:pointerover">
-            <Setter Property="Background" Value="Lime"/>
-        </Style>
-    </Window.Styles>
-
-
-  <Grid RowDefinitions="Auto,*,Auto" Background="{StaticResource PrimaryBackground}">
+        
+  <Grid RowDefinitions="Auto,*," Background="{StaticResource PrimaryBackground}">
 
   
 
@@ -42,59 +28,82 @@
               
               <!--User Input field-->
        <TextBox x:Name="UserInput"
-               Height="30"
-               Width="120"
                Background="#053363"
-               Foreground="White"
+               Foreground=""
+               FontSize="14"
+               FontWeight="ExtraLight"
+               FontFamily="Arial"
                Text="Enter amount.."
                GotFocus="UserInput_GotFocus"
-               BorderThickness="1"
+               BorderThickness="2"
                BorderBrush="{StaticResource BorderBackground}"
                VerticalAlignment="Center" />
 
                
                <!--FromCurrency Combo Box-->
-      <ComboBox x:Name="selectedFromCurrency"
-                PlaceholderText="preview selected:"
+       <ComboBox x:Name="selectedFromCurrency"
+                PlaceholderText="From Currency:"
+                FontSize="14"
+                FontWeight="ExtraLight"
                 BorderThickness="2"
                 Background="#053363"
                 Foreground="White"
                 BorderBrush="{StaticResource BorderBackground}"
                 Width="200"
-                VerticalAlignment="Center" />
-
-               <!--Exchange arrows Icon--> 
+                VerticalAlignment="Center">
+          <ComboBoxItem Content="USD"/>
+          <ComboBoxItem Content="EUR"/>
+          <ComboBoxItem Content="GBP"/>
+          <ComboBoxItem Content="JPY"/>
+       </ComboBox>
+               
+    <!--Exchange arrows Icon--> 
       <Image Source="avares://CurrencyConvert.UI/Assets/exchange-arrow-11030121-8877725.png"
              Width="100"
              VerticalAlignment="Center" />
 
-
-              <!--ToCurrency Combo Box-->
+             
+        
+      <!--ToCurrency Combo Box-->
       <ComboBox x:Name="convertingToCurrency"
-                PlaceholderText="preview desired:"
+                PlaceholderText="Desired Currency:"
+                FontSize="14"
+                FontWeight="ExtraLight"
                 BorderThickness="2"
                 Background="#053363"
                 Foreground="White"
                 BorderBrush="{StaticResource BorderBackground}"
                 Width="200"
-                VerticalAlignment="Center" />
+                VerticalAlignment="Center">
+            <ComboBoxItem Content="USD"/>
+            <ComboBoxItem Content="EUR"/>
+            <ComboBoxItem Content="GBP"/>
+            <ComboBoxItem Content="JPY"/>
+         </ComboBox>
               
               <!--Fetch Rates Button-->
-      <Button Content="Fetch Rate"                
+      <Button Content="Convert"                
               BorderThickness="3"
-              Classes="convert-button"
+              Margin="10"
+              Background="#053363"
+              FontSize="14"
+              FontWeight="Bold"
+              FontFamily="Arial" 
+              Foreground="Gold"
               BorderBrush="{StaticResource BorderBackground}"
-              VerticalAlignment="Center" />
+              VerticalAlignment="Center"
+              Click="OnConvertClick" />
     </StackPanel>
 
-    <!-- Output window at the bottom -->
+    <!-- Output window at the bottom 
     <Border Grid.Row="2" Background="{StaticResource PrimaryBackground}" BorderBrush="{StaticResource BorderBackground}" Height="200" VerticalAlignment="Center">
       <TextBlock Text="Preview Window"
                  HorizontalAlignment="Center"
                  VerticalAlignment="Center"
                  Foreground="Black" />
-    </Border>
 
+    </Border>
+                  -->
   </Grid>
 
   
