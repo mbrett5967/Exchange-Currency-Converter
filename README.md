@@ -4,6 +4,11 @@ Link to App:<h4>[https://github.com/mbrett5967/Exchange-Currency-Converter/tree/
 >[!IMPORTANT]  
 > As of July 2025: This is currently being rewritten from a console application to full Ui frontend. As a result, previous application is now WIP and non functioning.
 
+
+Sample of current project:
+<img width="1080" height="678" alt="image" src="https://github.com/user-attachments/assets/1b38000b-bf32-4754-a0c2-51825c218a97" />
+
+
 --- Summary --- 
 
 
